@@ -1,4 +1,4 @@
-# Repositorio Spark
+# Repositorio Django Copa América
 
 **Nombre:** Electiva 1 Desarrollo de Software
 
