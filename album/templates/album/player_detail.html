@@ -22,7 +22,11 @@
 {% block maincontent %}
 <div>
  <div>
-     <img src="{% static object.photo.url %}" style="width:250px;height:330px" />
+    <img src="{% static object.photo.url %}" style="width:250px;height:330px" />
+    <br>
+       <br>
+    <p><strong>Height: </strong>{{object.height}}</p>
+    <p><strong>Weight: </strong>{{object.weight}}</p>
  </div>
 </div>
 {% endblock maincontent %} 

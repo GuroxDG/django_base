@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block section %}
-<h2> PLAYERS </h2>
+<h2 class="letrero"> PLAYERS </h2>
 <hr>
 {% endblock section %}
 
@@ -11,7 +11,7 @@
 <div>
     {% for c in object_list %}
         <img src="{% static c.photo.url %}" style="width:50px;height:50px"/>
-        <a href="{% url 'player-detail' c.pk %}">
+        <a class='jugadores' href="{% url 'player-detail' c.pk %}">
             {{ c.first_name }} {{ c.last_name }} <br>
         </a>
         <br>
