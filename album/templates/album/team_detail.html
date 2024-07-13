@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block section %}
-    <h2>{{ object.name }}</h2>
-    <img src="{% static object.shield.url %}" style="width:50px;height:50px"/>
-    <hr>
+
+   <img src="{% static object.shield.url %}" style="width:50px;height:50px"/>
+   <h2>{{ object.name }}</h2>
+   <a class="enlace" href="{% url "team-update" object.id %}">Edit</a>
+   <a class="enlace" href="{% url "team-delete" object.id %}">Delete</a>
+   <hr>
+
+   <img src="{% static object.team.url %}" style="width:350px;height:200px"/>
+   <hr>
 {% endblock section %}
 
 {% block maincontent %}

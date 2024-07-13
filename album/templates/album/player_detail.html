@@ -13,8 +13,8 @@
     </h2>
     <p><strong>comments: </strong>{{ object.comment|default:"no comments" }}</p>
 
-   <a href="{% url "player-update" object.id %}">edit</a>
-   <a href="{% url "player-delete" object.id %}">delete</a>
+   <a  class="enlace" href="{% url "player-update" object.id %}">Edit</a>
+   <a  class="enlace" href="{% url "player-delete" object.id %}">Delete</a>
    <hr>
    
 {% endblock section %}

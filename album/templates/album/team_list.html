@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block section %}
-<h2> TEAM </h2>
+<h2> TEAMS </h2>
 <hr>
 {% endblock section %}
 
@@ -9,6 +10,7 @@
 
 <div>
     {% for c in object_list %}
+        <img src="{% static c.shield.url %}" style="width:20px;height:20px"/>
         <a href="{% url 'team-detail' c.pk %}">
             {{ c.name }} <br>
         </a>

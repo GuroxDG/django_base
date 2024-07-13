@@ -1,1 +1,21 @@
-{{object_list}}
+{% extends "base.html" %}
+{% load static %}
+
+{% block section %}
+<h2> PLAYERS </h2>
+<hr>
+{% endblock section %}
+
+{% block maincontent %}
+
+<div>
+    {% for c in object_list %}
+        <img src="{% static c.photo.url %}" style="width:50px;height:50px"/>
+        <a href="{% url 'player-detail' c.pk %}">
+            {{ c.first_name }} {{ c.last_name }} <br>
+        </a>
+        <br>
+    {% endfor %}
+</div>
+
+{% endblock maincontent %}

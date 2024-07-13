@@ -30,37 +30,62 @@
         {% block nav_links_ul %}
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
             {% block nav_links_outer %}
-            <li class="nav-header">{% block nav_heading %}Menu PPAL{% endblock %}</li>
+
+            <li class="nav-header">{% block nav_heading %}Menu Principal{% endblock %}</li>
 
             {% block nav_links %}
-            <li>
-                <a href="{% url "team-list" %}">
-                    <i class="fa fa-users"></i> <span>Team</span>
-                </a>
-            </li>
-            <li>
-                    <a href="{% url "player-list" %}">
-                        <i class="fa fa-address-card"></i> <span>Player</span>
-                    </a>
-                </li>
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-save"></i> <span>Create</span>
+                    <i class="fa fa-save"></i> 
+                    <span>Teams</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                        <li>
-                            <a href="{% url "player-create" %}">
-                                <i class="fa fa-address-card"></i> Player
-                            </a>
-                        </li>
+                    <li>
+                        <a href="{% url "team-list" %}">
+                            <i class="fa fa-address-card"></i> 
+                            <span>List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url "team-create" %}">
+                            <i class="fa fa-address-card"></i> Create
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-save"></i> 
+                    <span>Player</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="{% url "player-list" %}">
+                            <i class="fa fa-address-card"></i> 
+                            <span>List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url "player-create" %}">
+                            <i class="fa fa-address-card"></i> Create
+                        </a>
+                    </li>
                 </ul>
             </li>
             {% endblock nav_links %}
+
             {% endblock nav_links_outer %}
+
             </ul>
             </nav>
         {% endblock nav_links_ul %}
