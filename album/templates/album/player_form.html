@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% comment %} 
+- multipart/form-data, para enviar imagénes- 
+- Las imágenes solo se ṕueden enviar por post 
+{% endcomment %}
+{% block maincontent %}
+  <form enctype="multipart/form-data" method="post">{% csrf_token %}
+         {{ form.as_p }}
+        <br>
+       <button type="submit">Save</button>
+    <a class='btn' href="{% url 'player-list' %}">Cancel</a>
+  </form>
+{% endblock maincontent%} 
